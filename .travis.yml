@@ -1,10 +1,10 @@
 
 os: osx
-sudo: required
+# sudo: required
 
 
-before_install:
-  - brew update
+# before_install:
+#   - brew update
 
 install:
   - brew install cppcheck qt
