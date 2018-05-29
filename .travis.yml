@@ -1,12 +1,13 @@
 
 os: osx
+sudo: required
 
 
 before_install:
   - brew update
 
 install:
-  - brew install cppcheck qt@510
+  - brew install cppcheck qt
   # - brew install boost
   # - brew install llvm@3.7
   # - brew install netcdf
