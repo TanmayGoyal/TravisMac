@@ -7,7 +7,8 @@ before_install:
   - brew update
 
 install:
-  - brew install cppcheck qt@5.10
+  - brew install cppcheck qt@5
+  - brew link qt5 --force
   # - brew install boost
   # - brew install llvm@3.7
   # - brew install netcdf
