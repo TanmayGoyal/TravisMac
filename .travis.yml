@@ -1,0 +1,13 @@
+
+os: osx
+
+install:
+  - brew install qt@5.10
+  # - brew install boost
+  # - brew install llvm@3.7
+  # - brew install netcdf
+  # - 
+script:
+  - cd test/
+  - qmake test.pro
+  - make
