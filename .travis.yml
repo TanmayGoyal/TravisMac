@@ -15,16 +15,11 @@ install:
         brew install llvm@3.7;
         brew install cppcheck qt;
         brew link qt5 --force;
-
-
-
     fi
 
     if [ "$TRAVIS_OS_NAME" == "linux" ]; then
       sudo apt-get update -qq;
       sudo apt-get install -qq qt5-qmake qtbase5-dev qtscript5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev libboost-all-dev libnetcdf-dev;
-
-     
     fi
 
 # brew install cppcheck qt
@@ -33,9 +28,11 @@ install:
 # - brew install llvm@3.7
 # - brew install netcdf
 # - 
-  script:
-    - cd test/
-    - qmake test.pro
-    - make
-    - ls
-    - uname
+
+
+script:
+  - cd test/
+  - qmake test.pro
+  - make
+  - ls
+  - uname
