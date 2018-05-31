@@ -8,7 +8,7 @@ os:
 # before_install:
 #   - brew update
 
-script:
+install:
   - |
 
     if [ "$TRAVIS_OS_NAME" == "osx" ]; then
@@ -17,12 +17,6 @@ script:
         brew link qt5 --force;
 
 
-        cd test/;
-        qmake test.pro;
-        make;
-
-        ls;
-        
 
     fi
 
@@ -30,11 +24,7 @@ script:
       sudo apt-get update -qq;
       sudo apt-get install -qq qt5-qmake qtbase5-dev qtscript5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev libboost-all-dev libnetcdf-dev;
 
-      cd test/;
-      qmake test.pro;
-      make;
-
-      ls;
+     
     fi
 
 # brew install cppcheck qt
@@ -43,7 +33,7 @@ script:
 # - brew install llvm@3.7
 # - brew install netcdf
 # - 
-# script:
-#   - cd test/
-#   - qmake test.pro
-#   - make
+  script:
+    - cd test/
+    - qmake test.pro
+    - make
