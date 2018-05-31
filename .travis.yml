@@ -10,22 +10,24 @@ os:
 
 script:
   - |
+
+    set -e
     
-    if [ "$TRAVIS_OS_NAME" = "osx" ]; then
-      echo "mac"
+    if [ "$TRAVIS_OS_NAME" == "osx" ]; then
+      echo "mac";
 
     fi
 
-    if [ "$TRAVIS_OS_NAME" = "linux" ]; then
-      echo "linux"
+    if [ "$TRAVIS_OS_NAME" == "linux" ]; then
+      echo "linux";
     fi
 
-  # brew install cppcheck qt
-  # brew link qt5 --force
-  # - brew install boost
-  # - brew install llvm@3.7
-  # - brew install netcdf
-  # - 
+# brew install cppcheck qt
+# brew link qt5 --force
+# - brew install boost
+# - brew install llvm@3.7
+# - brew install netcdf
+# - 
 # script:
 #   - cd test/
 #   - qmake test.pro
