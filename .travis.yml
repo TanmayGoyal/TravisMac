@@ -37,3 +37,5 @@ install:
     - cd test/
     - qmake test.pro
     - make
+    - ls
+    - uname -a
